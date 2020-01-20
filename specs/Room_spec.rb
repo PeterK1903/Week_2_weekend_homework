@@ -36,6 +36,8 @@ class RoomTest < MiniTest::Test
     @song10 = Song.new("I love it", "Kanye West ft. Lil Pump", "2010s")
 
 
+
+
   end
 
   def test_find_room_by_name
@@ -119,10 +121,10 @@ class RoomTest < MiniTest::Test
 
 #Test is returning actual result of "2000s" which is consistent with the first record of @song
 
-  # def test_add_song_to_specific_room_by_decade
-  #   @room.add_song_to_specfic_room_by_decade(@song7)
-  #   assert_equal(1, @room.checking_song_count)
-  #   assert_equal("1970s", @song.decade)
-  # end
+  def test_add_song_to_specific_room_by_decade
+    @room.add_song_to_specfic_room_by_decade(@song7)
+    assert_equal(1, @room.checking_song_count)
+    assert_equal("1970s", @song7.decade)
+  end
 
 end

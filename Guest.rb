@@ -14,7 +14,7 @@ class Guest
   end
 
   def guest_cheering
-    p "Woo! Pass the mic, i'm oan first!"
+    return "Woo! Pass the mic, i'm oan first!"
   end
 
 end

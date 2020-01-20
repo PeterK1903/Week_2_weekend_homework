@@ -10,7 +10,7 @@ class Song
   end
 
 def find_song_by_decade
-  return @song.decade
+  return @decade
 end
 
 end

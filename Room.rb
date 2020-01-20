@@ -51,8 +51,8 @@ class Room
     @till += fee
   end
 
-  def find_guest_fave_song(fave_song)
-    if @playlist.include?(fave_song)
+  def find_guest_fave_song(song)
+    if @playlist.include?(song)
       return true
     else
       return false
@@ -73,25 +73,13 @@ class Room
 # Atemmpt at adding by decade to allow further function
 # that would take a party of guests, give median age and suggest a room based on songs by decade.
 
-  # def find_song_by_decade
-  #   return @song.decade
-  # end
-  #
-  # # def add_song_to_specfic_room_by_decade(song)
-  # #   adding_song_to_playlist(song)
-  # #     if @playlist.decade == "1970s"
-  #        binding.pry
-  # #       then @playlist.push(song)
-  # #     end
-  # #   end
-  #
-  # def add_song_to_specfic_room_by_decade(song)
-  #   song.find_song_by_decade
-  #   if song == "1970s"
-  #     binding.pry
-  #   adding_song_to_playlist(song)
-  #   end
-  # end
+  def add_song_to_specfic_room_by_decade(song)
+    song.find_song_by_decade
+    if song.decade == "1970s"
+      # binding.pry
+    adding_song_to_playlist(song)
+    end
+  end
 
 
 
